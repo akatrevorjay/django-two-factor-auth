@@ -12,9 +12,12 @@ setup(
     license='MIT',
     packages=find_packages(exclude=('example', 'tests')),
     install_requires=[
-        'Django>=1.4.2,<1.8.99,!=1.5.*,!=1.6.*',
-        'django_otp>=0.2.0,<0.3.99',
-        'qrcode>=4.0.0,<4.99',
+        'Django>=1.4.2,<1.9,!=1.5.*,!=1.6.*',
+        'django_otp==0.3.1',
+        'qrcode>4,<5',
+
+        'django-otp-yubikey',
+        'twilio',
     ],
     extras_require={
         'Call': ['twilio'],
